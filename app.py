@@ -32,7 +32,7 @@ if first is not None and sec is not None and third is not None:
     # Show button and wait for click
     if st.button("Upload", key="upload_button"):
         # Initialize Gemini client
-        client = genai.Client(api_key=os.getenv("GEMINI_API"))
+        client = genai.Client(api_key=st.secrets["GEMINI_API"])
         
 
         # Generate response for the first image
