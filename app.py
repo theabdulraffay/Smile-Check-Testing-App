@@ -49,7 +49,16 @@ if first is not None and sec is not None and third is not None:
                     data=first.getvalue(),
                     mime_type=first.type,
                 ),
-                "explain that image"
+                types.Part.from_bytes(
+                    data=sec.getvalue(),
+                    mime_type=sec.type,
+                ),
+                types.Part.from_bytes(
+                    data=third.getvalue(),
+                    mime_type=third.type,
+                ),
+
+                'You are a dental health care assistant. Check the dental situation and give a score between 1- 10. Also analyze the teeths and give your feedback or any tips for the future. Keep your answer short and concise. \n If the images is not clear, say "Image not clear". or if image is not related to dental situation, say "Image not related to dental situation".'
             ]
         )
 
