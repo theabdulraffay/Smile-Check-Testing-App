@@ -11,25 +11,19 @@ st.title("Image Display App")
 first = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key="first")
 
 if first is not None:
-    # Display the image
     st.image(first, caption="Uploaded Image")
-    # print(uploaded_file.getvalue()) 
 
 
 sec = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key="second")
 
 if sec is not None:
-    # Display the image
     st.image(sec, caption="Uploaded Image")
-    # print(uploaded_file.getvalue()) 
 
 
 third = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"], key="third")
 
 if third is not None:
-    # Display the image
     st.image(third, caption="Uploaded Image")
-    # print(uploaded_file.getvalue()) 
 
 
 if first is not None and sec is not None and third is not None:
