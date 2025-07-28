@@ -33,173 +33,159 @@ export default function Home() {
   return (
     <>
       <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-  {/* Background Image */}
-  <Image
-    src="/images/background.png"
-    alt="Background"
-    fill
-    quality={100}
-    priority
-    className="object-cover -z-10"
-  />
+        {/* Background Image */}
+        <Image
+          src="/images/background.png"
+          alt="Background"
+          fill
+          quality={100}
+          priority
+          className="object-cover -z-10"
+        />
 
-  {/* Stars and Lines */}
-  <div className="absolute inset-0 bottom-0">
-    <Image
-      src="/images/stars.png"
-      alt="Stars"
-      fill
-      className="object-contain object-bottom opacity-70"
-    />
-  </div>
-  <div className="absolute inset-0 bottom-0">
-    <Image
-      src="/images/lines.png"
-      alt="Lines"
-      fill
-      className="object-contain object-bottom opacity-70"
-    />
-  </div>
-
-  {/* Hero Section */}
-  <section className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32
-gap-12 z-10 py-40 lg:py-0">
-    {/* Text */}
-    <div className="max-w-xl text-white text-center lg:text-left">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-        Your Smile,
-        <br />
-        Your Investment.
-      </h1>
-      <p className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-sky-100">
-        AI-driven dental assessment, 3D simulation, and aligner planning —
-        all in one seamless experience.
-        <br />
-        Take control of your oral health as you would your most valuable
-        asset.
-      </p>
-      <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-        <button className="bg-black text-white px-5 py-3 rounded-md text-sm">
-          Upload a photo of your smile...
-        </button>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-4xl text-sm flex items-center gap-1">
-          Start SmileCheck <span>🔍</span>
-        </button>
-      </div>
-    </div>
-
-    {/* Image */}
-    <div className="relative w-[300px] sm:w-[400px] md:w-[480px] lg:w-[580px] h-[300px] sm:h-[400px] md:h-[480px] lg:h-[580px] pt-[60px] md:pt-[80px] lg:pt-[100px]">
-      <Image
-        src="/images/tooth.png"
-        alt="Tooth with Magnifier"
-        fill
-        className="object-contain"
-      />
-    </div>
-  </section>
-</main>
-
-
-      {/* What Is SmileCheck Section */}
-      <section className="bg-white py-20 px-40 text-black flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left Text Column */}
-        <div className="max-w-xl">
-          <p className="uppercase text-sm font-semibold text-[#0B869F] mb-2 flex items-center gap-2 tracking-widest">
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 8v4l3 2" />
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" />
-            </svg>
-            24 Hours Available
-          </p>
-          <h2 className="text-5xl font-bold mt-4 mb-4">What Is SmileCheck?</h2>
-          <p className="text-gray-700 text-lg mb-6">
-            SmileCheck helps you manage your 28 teeth like in assets. Track,
-            diagnose, and treat — all in one place.
-          </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-black font-medium mb-6">
-            <li className="flex items-center gap-2">
-              <span>
-                <Image
-                  src="/icons/tick.png"
-                  alt="Tick"
-                  width={24}
-                  height={24}
-                />
-              </span>{" "}
-              AI Dental Scoring
-            </li>
-            <li className="flex items-center gap-2">
-              <span>
-                <Image
-                  src="/icons/tick.png"
-                  alt="Tick"
-                  width={24}
-                  height={24}
-                />
-              </span>
-              Personalized Diagnostics
-            </li>
-            <li className="flex items-center gap-2">
-              <span>
-                <Image
-                  src="/icons/tick.png"
-                  alt="Tick"
-                  width={24}
-                  height={24}
-                />
-              </span>{" "}
-              Aligner Tracking
-            </li>
-            <li className="flex items-center gap-2">
-              <span>
-                <Image
-                  src="/icons/tick.png"
-                  alt="Tick"
-                  width={24}
-                  height={24}
-                />
-              </span>{" "}
-              Smile Investment Dashboard
-            </li>
-          </ul>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2">
-            Learn More <span>➔</span>
-          </button>
+        {/* Stars and Lines */}
+        <div className="absolute inset-0 bottom-0">
+          <Image
+            src="/images/stars.png"
+            alt="Stars"
+            fill
+            className="object-contain object-bottom opacity-70"
+          />
+        </div>
+        <div className="absolute inset-0 bottom-0">
+          <Image
+            src="/images/lines.png"
+            alt="Lines"
+            fill
+            className="object-contain object-bottom opacity-70"
+          />
         </div>
 
-        {/* Right Image with Floating Texts */}
-        <div className="relative w-full max-w-md">
-          {/* Girl Image */}
-          <Image
-            src="/images/girl.png"
-            alt="SmileCheck Overview"
-            width={600}
-            height={600}
-            className="w-full h-auto"
-          />
-
-          {/* Floating Labels */}
-          <div className="absolute top-14 left-22 bg-[#0B869F] text-white px-4 py-3 rounded-full text-sm font-medium shadow-md">
-            AI Dentist Chat 💬
+        {/* Hero Section */}
+        <section
+          className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32
+gap-12 z-10 py-40 lg:py-0"
+        >
+          {/* Text */}
+          <div className="max-w-xl text-white text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Your Smile,
+              <br />
+              Your Investment.
+            </h1>
+            <p className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-sky-100">
+              AI-driven dental assessment, 3D simulation, and aligner planning —
+              all in one seamless experience.
+              <br />
+              Take control of your oral health as you would your most valuable
+              asset.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+              <button className="bg-black text-white px-5 py-3 rounded-md text-sm">
+                Upload a photo of your smile...
+              </button>
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-4xl text-sm flex items-center gap-1">
+                Start SmileCheck <span>🔍</span>
+              </button>
+            </div>
           </div>
 
-          <div className="absolute top-42 left-20 bg-[#0B869F] text-white px-4 py-3 rounded-full text-sm font-medium shadow-md">
-            Health Alerts 🔔
+          {/* Image */}
+          <div className="relative w-[300px] sm:w-[400px] md:w-[480px] lg:w-[580px] h-[300px] sm:h-[400px] md:h-[480px] lg:h-[580px] pt-[60px] md:pt-[80px] lg:pt-[100px]">
+            <Image
+              src="/images/tooth.png"
+              alt="Tooth with Magnifier"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </section>
+      </main>
+
+      {/* What Is SmileCheck Section */}
+      <section className="relative w-full flex items-center justify-center overflow-hidden bg-white text-black">
+        <div className="w-full max-w-[1440px] mx-auto box-border px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-20 lg:py-32 flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left Text Column */}
+          <div className="max-w-xl text-center lg:text-left">
+            <p className="uppercase text-sm sm:text-base font-semibold text-[#0B869F] mb-2 flex items-center justify-center lg:justify-start gap-2 tracking-widest">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 8v4l3 2" />
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" />
+              </svg>
+              24 Hours Available
+            </p>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-4 leading-tight">
+              What Is SmileCheck?
+            </h2>
+
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-6">
+              SmileCheck helps you manage your 28 teeth like in assets. Track,
+              diagnose, and treat — all in one place.
+            </p>
+
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm sm:text-base text-black font-medium mb-6">
+              {[
+                "AI Dental Scoring",
+                "Personalized Diagnostics",
+                "Aligner Tracking",
+                "Smile Investment Dashboard",
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-2 justify-center lg:justify-start"
+                >
+                  <Image
+                    src="/icons/tick.png"
+                    alt="Tick"
+                    width={24}
+                    height={24}
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex justify-center lg:justify-start">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 text-sm">
+                Learn More <span>➔</span>
+              </button>
+            </div>
           </div>
 
-          <div className="absolute top-50 -right-8 bg-[#0B869F] text-white px-4 py-3 rounded-full text-sm font-medium shadow-md">
-            Treatment Records 📄
-          </div>
+          {/* Right Image with Floating Labels */}
+          <div className="relative w-[300px] sm:w-[400px] md:w-[480px] lg:w-[580px] h-auto">
+            <Image
+              src="/images/girl.png"
+              alt="SmileCheck Overview"
+              width={600}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
 
-          <div className="absolute bottom-40 left-24 bg-[#0B869F] text-white px-4 py-3 rounded-full text-sm font-medium shadow-md">
-            Analysis and Tracking 🛠️
+            {/* Floating Labels */}
+            {/* Floating Labels */}
+            <div className="absolute top-12 left-4 sm:left-8 md:left-10 bg-[#0B869F] text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-base font-medium shadow-md">
+              AI Dentist Chat 💬
+            </div>
+
+            <div className="absolute top-36 left-4 sm:left-8 md:left-10 bg-[#0B869F] text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-base font-medium shadow-md">
+              Health Alerts 🔔
+            </div>
+
+            <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-[#0B869F] text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-base font-medium shadow-md">
+              Treatment Records 📄
+            </div>
+
+            <div className="absolute bottom-20 left-8 sm:left-12 md:left-16 bg-[#0B869F] text-white px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-base font-medium shadow-md">
+              Analysis and Tracking 🛠️
+            </div>
           </div>
         </div>
       </section>
