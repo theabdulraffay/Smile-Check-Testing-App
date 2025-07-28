@@ -33,85 +33,73 @@ export default function Home() {
   return (
     <>
       <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+  {/* Background Image */}
+  <Image
+    src="/images/background.png"
+    alt="Background"
+    fill
+    quality={100}
+    priority
+    className="object-cover -z-10"
+  />
+
+  {/* Stars and Lines */}
+  <div className="absolute inset-0 bottom-0">
+    <Image
+      src="/images/stars.png"
+      alt="Stars"
+      fill
+      className="object-contain object-bottom opacity-70"
+    />
+  </div>
+  <div className="absolute inset-0 bottom-0">
+    <Image
+      src="/images/lines.png"
+      alt="Lines"
+      fill
+      className="object-contain object-bottom opacity-70"
+    />
+  </div>
+
+  {/* Hero Section */}
+  <section className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32
+gap-12 z-10 py-40 lg:py-0">
+    {/* Text */}
+    <div className="max-w-xl text-white text-center lg:text-left">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        Your Smile,
+        <br />
+        Your Investment.
+      </h1>
+      <p className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-sky-100">
+        AI-driven dental assessment, 3D simulation, and aligner planning —
+        all in one seamless experience.
+        <br />
+        Take control of your oral health as you would your most valuable
+        asset.
+      </p>
+      <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+        <button className="bg-black text-white px-5 py-3 rounded-md text-sm">
+          Upload a photo of your smile...
+        </button>
+        <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-4xl text-sm flex items-center gap-1">
+          Start SmileCheck <span>🔍</span>
+        </button>
+      </div>
+    </div>
+
+    {/* Image */}
+    <div className="relative w-[300px] sm:w-[400px] md:w-[480px] lg:w-[580px] h-[300px] sm:h-[400px] md:h-[480px] lg:h-[580px] pt-[60px] md:pt-[80px] lg:pt-[100px]">
       <Image
-        src="/images/background.png"
-        alt="Background"
+        src="/images/tooth.png"
+        alt="Tooth with Magnifier"
         fill
-        quality={100}
-        priority
-        className="object-cover -z-10"
+        className="object-contain"
       />
+    </div>
+  </section>
+</main>
 
-      {/* Stars and Lines */}
-      <div className="absolute inset-0 bottom-0">
-        <Image
-          src="/images/stars.png"
-          alt="Stars"
-          fill
-          className="object-contain object-bottom opacity-70"
-        />
-      </div>
-      <div className="absolute inset-0 bottom-0">
-        <Image
-          src="/images/lines.png"
-          alt="Lines"
-          fill
-          className="object-contain object-bottom opacity-70"
-        />
-      </div>
-
-      {/* Hero Section - Fixed Responsive Issues */}
-      <section className="flex flex-col lg:flex-row items-center justify-between gap-10 z-10
-        px-12 lg:px-24 
-        py-40 md:py-40 lg:py-24 xl:py-4 2xl:py-0">
-        
-        {/* Text - Fixed sizing for all screens */}
-        <div className="text-white w-2/3 lg:w-2/3 2xl:w-1/2">
-          
-          <h1 className="font-bold leading-tight
-            text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-9xl
-            mb-4 lg:mb-6 2xl:mb-8">
-            Your Smile,
-            <br />
-            Your Investment.
-          </h1>
-          
-          <p className="text-sky-100 leading-relaxed
-            text-sm sm:text-sm md:text-base xl:text-lg 2xl:text-3xl
-            mb-6 lg:mb-8 2xl:mb-10">
-            AI-driven dental assessment, 3D simulation, and aligner planning —
-            all in one seamless experience.
-            <br />
-            Take control of your oral health as you would your most valuable
-            asset.
-          </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-black text-white rounded-md
-              px-3 py-2 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-3 md:text-sm 
-              lg:px-4 lg:py-2 lg:text-sm xl:px-6 xl:py-3 xl:text-base 2xl:px-10 2xl:py-5 2xl:text-2xl">
-              Upload a photo of your smile...
-            </button>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white rounded-4xl flex items-center gap-1
-              px-3 py-2 text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-3 md:text-sm 
-              lg:px-4 lg:py-2 lg:text-sm xl:px-6 xl:py-3 xl:text-base 2xl:px-10 2xl:py-5 2xl:text-2xl">
-              Start SmileCheck <span className="2xl:text-3xl">🔍</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Image - Fixed sizing and positioning */}
-        <div className="relative w-[500px] h-[500px] pt-[100px] xl:w-[780px] 2xl:h-[1300px]">
-          <Image
-            src="/images/tooth.png"
-            alt="Tooth with Magnifier"
-            fill
-            className="object-contain"
-          />
-        </div>
-      </section>
-    </main>
 
       {/* What Is SmileCheck Section */}
       <section className="bg-white py-20 px-40 text-black flex flex-col md:flex-row items-center justify-between gap-6">
@@ -362,5 +350,3 @@ export default function Home() {
     </>
   );
 }
-
-//hiiihnnhnjnjn
