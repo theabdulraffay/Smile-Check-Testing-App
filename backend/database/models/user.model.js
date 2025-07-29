@@ -36,7 +36,7 @@
 //       type: Boolean,
 //       default: false,
 //     },
-    
+
 //     wishlist:[{type:Schema.ObjectId,ref : 'product'}],
 //     addresses:[{
 //       city:String,
@@ -55,12 +55,10 @@
 //     if(this._update.password){
 //         this._update.password = bcrypt.hashSync(this._update.password, 8);
 //     }
- 
+
 // });
 
 // export const userModel = model("user", userSchema);
-
-
 
 import mongoose, { Schema, model } from "mongoose";
 import bcrypt from "bcrypt";
@@ -83,6 +81,11 @@ const userSchema = new Schema(
       required: function () {
         return !this.isGoogleUser;
       },
+    },
+    age: {
+      type: Number,
+      required: true, // if age is mandatory
+      min: 0,
     },
     googleId: {
       type: String,

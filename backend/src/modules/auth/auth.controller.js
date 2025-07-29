@@ -11,7 +11,7 @@ const sanitizeUser = (user) => {
 };
 
 export const signUp = catchAsyncError(async (req, res, next) => {
-  const { name, email, password, isGoogleUser, picture } = req.body;
+  const { name, email, password, isGoogleUser, picture, age } = req.body;
 
   let user = await User.findOne({ email });
 
@@ -23,7 +23,7 @@ export const signUp = catchAsyncError(async (req, res, next) => {
       const token = generateToken(user);
       return res.status(200).json({ message: "Logged in with Google", user: sanitizeUser(user), token });
     } else {
-      return next(new AppError("User already exists!", 400));
+      return next(new AppError("This email is already registered. Try logging in instead.", 400));
     }
   }
 
@@ -33,6 +33,7 @@ export const signUp = catchAsyncError(async (req, res, next) => {
     name,
     email,
     password,
+    age,
     isGoogleUser: isGoogleUser || false,
     verified: isGoogleUser || false,
     picture: avatarUrl,
@@ -41,6 +42,7 @@ export const signUp = catchAsyncError(async (req, res, next) => {
   const token = generateToken(user);
   res.status(201).json({ message: "User created successfully", user: sanitizeUser(user), token });
 });
+
 
 export const signIn = async (req, res, next) => {
   const { email, password, isGoogleUser } = req.body;
