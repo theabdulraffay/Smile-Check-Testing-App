@@ -22,21 +22,21 @@ export default function Navbar() {
       ${scrolled ? "bg-white/70" : ""} backdrop-blur-md 
       rounded-2xl px-6 py-3 shadow-lg flex justify-between items-center transition-colors duration-300`}
     >
-      <div className="flex items-center space-x-2">
+      <Link href="/" className="flex items-center space-x-2">
         <Image
           src="/icons/smilecheck.png"
           alt="SmileCheck Logo"
           width={180}
           height={180}
         />
-      </div>
+      </Link>
       <div className="hidden md:flex space-x-10 font-medium text-black">
         <Link href="#">Features</Link>
         <Link href="#">About</Link>
         <Link href="#">How it Works</Link>
       </div>
       <Link
-        href="#"
+        href="/signin"
         className="bg-[#0B869F] hover:bg-cyan-800 text-white px-5 py-2 rounded-full text-md font-light transition"
       >
         Sign up/Login

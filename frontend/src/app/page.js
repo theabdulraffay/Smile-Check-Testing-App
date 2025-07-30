@@ -62,31 +62,49 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section
-          className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32
-gap-12 z-10 py-40 lg:py-0"
-        >
+        <section className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 gap-12 z-10 py-40 lg:py-0">
           {/* Text */}
           <div className="max-w-xl text-white text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-[#393939] via-[#235F6B] to-[#0B869F] bg-clip-text text-transparent">
               Your Smile,
               <br />
               Your Investment.
             </h1>
-            <p className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-sky-100">
+            <p className="mt-6 text-sm sm:text-base md:text-base lg:text-lg text-gray-600">
               AI-driven dental assessment, 3D simulation, and aligner planning —
               all in one seamless experience.
-              <br />
-              Take control of your oral health as you would your most valuable
-              asset.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="bg-black text-white px-5 py-3 rounded-md text-sm">
-                Upload a photo of your smile...
-              </button>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-4xl text-sm flex items-center gap-1">
-                Start SmileCheck <span>🔍</span>
-              </button>
+
+            {/* Info Box */}
+            <div className="mt-8 bg-gradient-to-b from-[#0B869F] via-[#62A0AD] to-[#BBBBBB] backdrop-blur-sm rounded-lg p-4 text-white">
+              <p className="text-sm">
+                Click the "Add Images" button in the bottom left corner to
+                upload your new smiling teeth photo, or simply type any question
+                you have about your dental health.
+              </p>
+              <div className="mt-10 flex items-center justify-between">
+                <button className="bg-[#6A6A6A] rounded-4xl text-white px-4 py-2 text-sm flex items-center gap-2">
+                  <span>
+                    <Image
+                      src="/icons/photo.png"
+                      alt="image"
+                      width={20}
+                      height={20}
+                    />
+                  </span>{" "}
+                  Add Images
+                </button>
+                <button className="bg-[#0B869F] hover:bg-[#0a7186] text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer transition-colors duration-300">
+                  <span>
+                    <Image
+                      src="/icons/arrow-forward.png"
+                      alt="image"
+                      width={16}
+                      height={16}
+                    />
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
 

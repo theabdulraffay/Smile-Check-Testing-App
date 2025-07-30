@@ -401,8 +401,7 @@ const SignupPage = () => {
       }
     } catch (err) {
       const errorMessage =
-        err.response?.data?.error ||
-        "Something went wrong. Please try again.";
+        err.response?.data?.error || "Something went wrong. Please try again.";
       showSnackbar(errorMessage, "error");
     } finally {
       setLoading(false);
@@ -430,9 +429,15 @@ const SignupPage = () => {
         className="object-contain object-bottom opacity-70 -z-10"
       />
 
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full px-4 sm:px-6 md:px-10 lg:px-12 xl:px-20 2xl:px-24 py-12 gap-8 max-w-screen-2xl mx-auto">
-        <section className="flex justify-center items-center w-full max-w-[500px]">
-          <div className="relative w-[240px] sm:w-[320px] md:w-[380px] lg:w-[420px] h-[240px] sm:h-[320px] md:h-[380px] lg:h-[420px] pt-[40px] md:pt-[60px]">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full px-4 sm:px-6 md:px-10 lg:px-12 xl:px-20 2xl:px-24 py-12 gap-y-10 gap-x-10 max-w-[1440px] mx-auto">
+        {/* Tooth Section */}
+        <section className="flex justify-center items-center w-full max-w-[550px]">
+          <div
+            className="relative 
+        w-[300px] sm:w-[360px] md:w-[420px] lg:w-[400px] xl:w-[500px] 
+        h-[300px] sm:h-[360px] md:h-[420px] lg:h-[400px] xl:h-[500px] 
+        pt-[40px] md:pt-[60px]"
+          >
             <Image
               src="/images/tooth.png"
               alt="Tooth with Magnifier"
@@ -443,7 +448,15 @@ const SignupPage = () => {
           </div>
         </section>
 
-        <div className="w-full max-w-[750px] mt-24 mb-2 bg-white opacity-90 rounded-xl shadow-2xl px-6 sm:px-10 py-8 z-10">
+        {/* Form Section */}
+        <div
+          className="w-full 
+      max-w-[650px] 
+      lg:max-w-[625px] 
+      xl:max-w-[600px] 
+      2xl:max-w-[580px] 
+      mt-24 mb-2 bg-white opacity-80 rounded-xl shadow-2xl px-10 sm:px-24  py-12 z-10"
+        >
           <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900">
             Welcome 👋
           </h1>
@@ -476,7 +489,7 @@ const SignupPage = () => {
                         placeholder="Password"
                         required
                         disabled={loading}
-                        className="w-full px-4 py-2 pr-10 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B869F] disabled:opacity-50 text-sm sm:text-base"
+                        className="w-full px-4 py-2 pr-10 border text-black border-black rounded-md focus:outline-none focus:ring-2 focus:ring-[#0B869F] disabled:opacity-50 text-sm sm:text-base"
                       />
                       <IconButton
                         onClick={() => setShowPassword((prev) => !prev)}
@@ -525,50 +538,22 @@ const SignupPage = () => {
               )
             )}
 
-            <div className="w-full text-right text-xs sm:text-sm mb-4">
-              <Link href="/account/forgot-password" className="text-[#0B869F]">
-                Forgot Password?
-              </Link>
-            </div>
-
-            <Button
+            <button
               type="submit"
-              variant="contained"
-              fullWidth
               disabled={loading}
-              style={{
-                backgroundColor: loading ? "#1d616e" : "#0B869F",
-                color: "ffffff",
-                textTransform: "none",
-                padding: "0.5rem",
-                fontSize: "0.875rem",
-              }}
+              className={`w-full mt-4 rounded-3xl text-white text-sm py-2 ${
+                loading ? "bg-[#1d616e]" : "bg-[#0B869F]"
+              } ${
+                loading
+                  ? "cursor-not-allowed opacity-80"
+                  : "hover:bg-[#09788e] transition"
+              }`}
             >
               {loading ? "Creating Account..." : "Sign Up"}
-            </Button>
+            </button>
           </form>
 
-          <div className="p-6 text-center text-xs sm:text-sm text-gray-500">
-            <span className="bg-white px-3">Or</span>
-          </div>
-
-          <div className="w-full flex flex-col gap-y-3">
-            <Button
-              variant="outlined"
-              fullWidth
-              disabled={loading}
-              startIcon={
-                <img src="/icons/google.png" alt="Google" className="w-5 h-5" />
-              }
-              style={{
-                fontSize: "0.875rem",
-              }}
-            >
-              Sign up with Google
-            </Button>
-          </div>
-
-          <span className="text-center text-xs sm:text-sm text-gray-600 mt-8 block">
+          <span className="text-center text-xs sm:text-sm text-gray-600 mt-2 block">
             Already a member?{" "}
             <Link href="/signin" className="text-[#0B869F] font-semibold">
               Sign in
